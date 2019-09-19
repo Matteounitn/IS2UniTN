@@ -118,3 +118,79 @@ I sistemi web hanno dei requisiti:
 2. Sviluppo e consegna in modo **incrementale**.
 3. Sviluppo di **interfaccia grafica-GUI** molto importante. 
 
+## 19/09/2019
+
+Descrizione minima di un processo: Quando di solito diescriviamo un processo parliamo di attività, […]
+
+le descrizioni dei processi includono input (attività), outputs (prodotti), ruoli (responsabilità delle persone coinvolte), pre e pos-condizioni delle attività
+
+Ad esempio considerando l'attività fare la spesa, i soldi sono input, i prodotti acquistati sono gli output, il ruolo tuo è di fare la spesa, precondizione avere soldi, dispensa vuota, postcondizione dispensa piena
+
+Se dettagliamo un attività in più sub-attivita1 diventa un processo
+
+Modello di processo: una descrizione semplificata del processo, osservato da un determinato punto di vista (cit. Giorgini)
+
+[Esempio di bpmn]
+
+### Processo del software
+
+Il processo del sofware è un insieme strutturato di attività necessarie per sviluppare un sistema sofware
+Modello di processo soware è una rappresentazione astratta di un processo. 
+
+2 scuole di pensiero, plan-driven or agile
+Plan-driven process:  sono processi in cui tutte le attivita1 di processo sono pianificate in anticipo e i progressi sono misurati rispetto a questo piano.
+
+Agile driven process: la pianificazione è parziale e incrementale per adattarsi alle necessità dei clienti
+
+Waterfall
+
+Primo sviluppo incrementale: spirale
+
+Problemi dello sviluppo incrementale: Il processo non è visibilem la struttura del sistema tende a degradarsi con l'aggiunta di nuovi incrementi
+
+Riuso del software, applicazioni standalone (COTS) che sono configurate per l'uso in un ambiente particolare, collezioni di software objects (pacchetti da integrare con un framework di componenti) e i servizi web che sono sviluppati secondo gli standard di servizio e che sono disponibili per l'invocazione remota
+
+Vantaggi del riuso:
+
+riduzione dei costi e rischi, consegna e implementazione del sistema più rapida.
+
+Svantaggi: I compromessi sono inevitabili si perde il controllo sui componenti esterni utilizzati
+
+### Ingegneria dei requisiti 
+
+È il processo per stabilire quali servizi sono necessari
+
+Processo ingeneristico :
+
+* cattura e analisi requisiti 
+* specifiche requisiti 
+* valutazione requisiti 
+
+### Progettazione e implementazione del software
+
+Progetta una struttura sofware che realizzi la specification, poi si traduce la struttura in codice
+
+Analogia matematica: abbiamo una funzione $$f$$ che mappa le specifiche alla implementazione, però abbiamo la limitazione della tecnologia quindi non tutti i punti del dominio vengono mappati.
+
+Implementazione:
+
+Il software viene implementato sia sviluppando uno o piu programmi sia configurando un sistema. La programmazione è un attività individuale senza processo standard.
+
+Validazione e verificazione devono vedere se le specifiche sono state implementate correttamente e i clienti sono soddisfatti.
+
+È importante fare il testing dei componenti, ma anche il system testing perchè non è detto che i componenti che funzionano da soli funzionino bene insieme.
+
+Non solo nello sviluppo si deve fare testing (vedere slide per esempio)
+
+### Evoluzione del processo: 
+
+```mermaid
+graph LR;
+A[Misurazioni di Processo]-->B
+B[Analisi di Processo]-->C
+C[Cambiamento di Processo]-->A
+```
+
+
+
+
