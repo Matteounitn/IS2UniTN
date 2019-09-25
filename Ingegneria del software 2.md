@@ -146,7 +146,7 @@ Waterfall
 
 Primo sviluppo incrementale: spirale
 
-Problemi dello sviluppo incrementale: Il processo non è visibilem la struttura del sistema tende a degradarsi con l'aggiunta di nuovi incrementi
+Problemi dello sviluppo incrementale: Il processo non è visibile la struttura del sistema tende a degradarsi con l'aggiunta di nuovi incrementi
 
 Riuso del software, applicazioni standalone (COTS) che sono configurate per l'uso in un ambiente particolare, collezioni di software objects (pacchetti da integrare con un framework di componenti) e i servizi web che sono sviluppati secondo gli standard di servizio e che sono disponibili per l'invocazione remota
 
@@ -191,6 +191,137 @@ B[Analisi di Processo]-->C
 C[Cambiamento di Processo]-->A
 ```
 
+
+
+## 25/09/2019
+
+### Conceptual Modelling
+
+> **Conceptual Modelling:** Ottenimento dei requisiti del software
+
+Abbiamo diversi modelli. Ma che cos'è un modello:
+
+> **Modello**: Modo di **rappresentare**, **comunicare** e **documentare** soluzioni computazionali.
+
+Abbiamo diversi livelli per ogni modello.
+
+```mermaid
+graph TD;
+a(Problema)-->b[Descrizione problema]
+b-->a
+b-->c[descrizione soluzione]
+c-->b
+c-->d[sistema]
+d-->c
+```
+
+### Tecniche
+
+#### ER
+
+* Diagramma **E-R: Entity Relationship**;
+
+  * Paradigma strutturato
+
+    * *Entity*
+      * Insieme di oggetti del reale e gestita dal sistema.
+      * Possono essere **concreti** o **astratti**.
+    * *Relationship*
+    * *Attribute*
+    * *Generalization/specialization*
+    * *Associative Entity*
+
+  * Diagramma delle occorrenze: Tiene le istanze di ogni entità.
+
+    ![1569412591132](assets/1569412591132.png)
+
+  * Strutturato:
+
+    * Modello **input-processing-output**.
+    * I **dati** e le **funzioni** sono separati.
+
+#### UML
+
+* Unified Modelling Language(**UML**).
+  * Paradigma Object-Oriented:
+    * Modello ad **oggetti**;
+    * Gli oggetti combinano **dati e funzioni**;
+    * I **concetti** del problema sono modellati come **oggetti**, che sono associati e **interagiscono** tra loro.
+
+Nello sviluppo strutturato il **gap semantico è maggiore**, sono dunque difficili da mantenere:
+
+* Le funzioni devono conoscere la struttura dei dati
+* Le modifiche nella struttura dei dati risultano in cambiamenti delle funzioni correlate.
+
+UML va a sostituirlo:
+
+* Miglioramento di **interazione tra analisti e specialisti**
+* Supporto per **riuso e la leggibilità**
+* Uso del "mondo ad oggetti".
+
+
+
+##### Astrazione
+
+> **Modelli mentali:** Ho una visione più semplice del mondo, ignoro gli aspetti irrilevanti creando **astrazione.**
+
+##### Incapsulamento
+
+L'incapsulamento ci permette di separare **aspetti esterni** (cosa fa) dagli aspetti **interni** (come fa):
+
+* Aspetti **esterni**: **interfaccia, contratto**;
+* Aspetti **interni**: **Implementazione**.
+
+##### Modularità
+
+Divido il sistema in moduli:
+
+* **Coesivi**
+* **Autonomi**
+* **Semplici e coerenti.**
+
+> Fondamentale per **riuso del software.**
+
+##### Gerarchia
+
+Divisione degli oggetti in gerarchia(l'extends praticamente)
+
+I più alti sono più generici.
+
+Strutturo meglio il **modello e semplifico la comprensione** del problema.
+
+**Sinergia** per gestire complessità:
+
+* *Astrazione che aiuta a identificare concetti rilevanti*
+* *Incapsulamento nasconde la vista interna*
+* *Modularità permette riuso e raggruppamento*
+* *Le astrazioni compongono le gerarchie.*
+
+
+
+##### Classi e oggetti
+
+> Una classe è un insieme di oggetti con le stesse proprietà, lo stesso comportamento e stesse relazioni con oggetti(con stessa semantica).
+
+Gli oggetti sono **istanze** delle classi.
+
+Uso di attributi privati e uso di getter e setter;
+
+
+
+(prosegue con ING.SW 1), guarda slide
+
+Annoto solo ciò che non è stato fatto a IS1
+
+* `{complete}`  tutti i risultati
+* `{disjoint,complete}` tutti i risultati e unici(non prendo in join)
+
+**part-whole**: Aggregazione e composizione(una ruota è parte di una macchina) (uso del diamante)
+
+* Diamante vuoto: Aggregazione
+* Diamante pieno: Composizione
+
+(quello che abbiamo fatto con JAVA ronchetti, part-of)
 
 
 
